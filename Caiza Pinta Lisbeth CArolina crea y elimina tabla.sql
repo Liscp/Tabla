@@ -2,7 +2,7 @@
 
 DROP DATABASE IF EXISTS Dibujo;
 
-/*Creación de la base de datos llamada Juegos.*/
+/*Creación de la base de datos llamada Dibujos .*/
 
 CREATE DATABASE Dibujos DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
@@ -10,11 +10,11 @@ CREATE DATABASE Dibujos DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 USE Dibujos;
 
-/*Eliminaos la tabla si Desarrollador existe antes*/
+/*Eliminaos la tabla si Pinceles existe antes*/
 
 DROP TABLE IF EXISTS Pinceles;
 
-/*Creamos una tabla llamada desarrollador*/
+/*Creamos una tabla llamada Pinceles*/
 
 CREATE TABLE Pinceles(
     
@@ -26,11 +26,11 @@ CREATE TABLE Pinceles(
     
 	PRIMARY KEY (id));
 
-/*Eliminamos la tabla Juego si existe antes*/
+/*Eliminamos la tabla Dibujo si existe antes*/
 
 DROP TABLE IF EXISTS Lienzo;
 
-/*Creamos una tabla llamada juego*/
+/*Creamos una tabla llamada Lienzo*/
 
 CREATE TABLE Lienzo(
     
@@ -42,11 +42,11 @@ CREATE TABLE Lienzo(
 	
 	PRIMARY KEY (id));
 
-/*Eliminaos la tabla Consola si existe antes*/
+/*Eliminaos la tabla Lienzo si existe antes*/
 
-DROP TABLE IF EXISTS Consola;
+DROP TABLE IF EXISTS  Pintores;
 
-/*Creamos una tabla llamada Consola*/
+/*Creamos una tabla llamada Pintores*/
 
 CREATE TABLE Pintores(
     
