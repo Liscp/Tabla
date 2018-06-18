@@ -1,62 +1,38 @@
-/*Eliminación de la base de datos Juegos si esta existe.*/
-
-DROP DATABASE IF EXISTS Dibujo;
-
-/*Creación de la base de datos llamada Dibujos .*/
-
-CREATE DATABASE Dibujos DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-
-/*Selección de la la base de datos con la que se va a trabajar*/
-
 USE Dibujos;
+/* Creamos una tabla llamada Pinceles */
 
-/*Eliminaos la tabla si Pinceles existe antes*/
-
-DROP TABLE IF EXISTS Pinceles;
-
-/*Creamos una tabla llamada Pinceles*/
-
-CREATE TABLE Pinceles(
+CREATE  TABLE  Pinceles (
     
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT  NOT NULL AUTO_INCREMENT,
     
-	nombre VARCHAR(40) NOT NULL,
+	nombre VARCHAR ( 40 ) NOT NULL ,
     
-	descripcion VARCHAR(300) NOT NULL,
+	descripcion VARCHAR ( 300 ) NOT NULL ,
     
 	PRIMARY KEY (id));
+/* Creamos una tabla llamada Lienzo */
 
-/*Eliminamos la tabla Dibujo si existe antes*/
-
-DROP TABLE IF EXISTS Lienzo;
-
-/*Creamos una tabla llamada Lienzo*/
-
-CREATE TABLE Lienzo(
+CREATE TABLE Lienzo (
     
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT  NOT NULL AUTO_INCREMENT,
     
-	nombre VARCHAR(40) NULL,
+	nombre VARCHAR ( 40 ) NOT NULL ,
     
-	material VARCHAR(50) NOT NULL,
+	material VARCHAR ( 50 ) NOT NULL ,
 	
 	PRIMARY KEY (id));
 
-/*Eliminaos la tabla Lienzo si existe antes*/
 
-DROP TABLE IF EXISTS  Pintores;
+/* Creamos una tabla llamada Pintores */
 
-/*Creamos una tabla llamada Pintores*/
-
-CREATE TABLE Pintores(
+CREATE TABLE Pintores (
     
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT  NOT NULL AUTO_INCREMENT,
     
-	nombrePintor VARCHAR(40) NULL,
+	nombrePintor VARCHAR ( 40 ) NOT NULL ,
     
-	Obra VARCHAR(50) NOT NULL,
+	Obra VARCHAR ( 50 ) NOT NULL ,
 	
 	Fecha DATE,
-    
-	PRIMARY KEY (id));
-
+ 
+    PRIMARY KEY (id));
