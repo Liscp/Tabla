@@ -1,0 +1,22 @@
+-- !EJECUTAR PASO POR PASO! NO TODO EL CÓDIGO UNIDO DE LO CONTRARIO SALDRÁ ERROR
+-- Paso 1.- Crea la base de Datos 
+CREATE DATABASE TiendaVideojuegos;
+-- Paso 2.- Se selecciona la base de datos creada
+USE TiendaVideojuegos;
+-- Paso 3.- Se crea la tabla 
+CREATE TABLE Clientes (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR (50) NOT NULL,
+    apellido VARCHAR (50) NOT NULL,
+    tipoVideojuego VARCHAR (50) NOT NULL,
+    celular VARCHAR (15),
+    descripsion VARCHAR (120) NOT NULL
+);
+-- MODIFICACIONES EN LAS TABLAS EJECUTAR UNA A LA VEZ
+-- ALTER TABLE "PRIMERO SELECCIONAR LA BASE DE DATOS"
+-- AGREGAR UNA COLUMNA
+ALTER TABLE Clientes ADD COLUMN referencia VARCHAR (50); 
+-- MODIFICAREL TIPO DE DATO DE LA COLUMNA
+ALTER TABLE Clientes MODIFY COLUMN referencia DATE;
+-- ELIMINAR UNA COLUMNA DE LA TABLA
+ALTER TABLE Clientes DROP COLUMN referencia;

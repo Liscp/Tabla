@@ -1,0 +1,30 @@
+USE Paises;
+
+CREATE TABLE Continentes(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombre VARCHAR (100)
+);
+CREATE TABLE Paises(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombre VARCHAR (100),
+idContinente INT,
+FOREIGN KEY (idContinente) REFERENCES Continentes(id)
+);
+CREATE TABLE Provincias(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombre VARCHAR (100),
+idPais INT,
+FOREIGN KEY (idPais) REFERENCES Paises(id)
+);
+CREATE TABLE Ciudades(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombre VARCHAR (100),
+idProvincia INT,
+FOREIGN KEY (idProvincia) REFERENCES Provincias(id)
+);
+CREATE TABLE Parroquias(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nombre VARCHAR (100),
+idCiudad INT,
+FOREIGN KEY (idCiudad) REFERENCES Ciudades(id)
+);
