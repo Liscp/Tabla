@@ -1,19 +1,19 @@
 DELIMITER $$
-CREATE PROCEDURE simple_loop ( ) 
+CREATE PROCEDURE lazo ( ) 
 BEGIN
-  DECLARE counter BIGINT DEFAULT 0;
+  DECLARE mostrador mediumint DEFAULT 0;
   
-  my_loop: LOOP
-    SET counter=counter+1;
+  mi_lazo: LOOP
+    SET mostrador=mostrador+1;
 
-    IF counter=10 THEN
-      LEAVE my_loop;
+    IF mostrador=20 THEN
+      LEAVE mi_lazo;
     END IF;
 
-    SELECT counter;
+    SELECT mostrador;
 
-  END LOOP my_loop;
+  END LOOP mi_lazo;
 END$$
 DELIMITER ;
 
-call simple_loop();
+call lazo();
